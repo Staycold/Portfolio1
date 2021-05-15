@@ -1,3 +1,79 @@
-*{
+:root { 
+    box-sizing: border-box;
+    /* background-color: #ffebcd; */
+    color: #5f6ba0;
+    --words: #5f9ea0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: linear-gradient( #ffebcd, #fff);
+        
+}
+
+/* this is the nav bar and tip top */
+.header{
+    background-color: bisque;
+    width: 100%;
     
+}
+
+.header li{
+    text-align: right;
+    display: inline;
+    flex:right;
+    font-size: 20px;
+    
+}
+
+/* this is a surprise ;) */
+span[data-desc]:hover::after{
+    content: attr(data-desc);
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+    border: 1px solid #fff;
+    background-color:#00bfff;
+    color:#f8f8ff;
+    padding: 11px;
+    z-index: 1;
+    font-weight: bolder;
+    
+}
+
+/* this is the banner directly under the nav bar */
+.underHeader{
+
+
+}
+
+/* this is the main body of the page */
+.bckrnd{
+
+}
+
+
+
+/* this is the work section in the main  */
+.work{
+
+}
+
+.contact li{
+    text-align: right;
+    display: inline;
+    flex:end;
+    font-size: 20px;
+    text-decoration: underline;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* this is the about me section */
+#about{
+    margin: 10px;
+    padding: 10px;
+    border-right: 5px solid var(--words);
+}
+
+/* this is the text in the about me container */
+#aboutMe{
+    text-align: right;
 }
