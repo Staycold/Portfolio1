@@ -22,14 +22,15 @@ h1 {
 /* this is the nav bar and tip top */
 .header{
     background-color: bisque;
-    /* width: 100%; */
     padding:20px;
-    /* display: flex; */
+    max-height: 5%;
+    
     
 }
 
 .header h1{
     display: inline-block;
+    max-width: 30%;
 }
 
 .header li {
@@ -68,14 +69,24 @@ span[data-desc]:hover::after{
 display: inline;
 margin-left: 0px;
 width: 100%;
-height: 175px;
+height: 5%;
 background-image:url("https://images.theconversation.com/files/306448/original/file-20191211-95111-fbz9rf.jpg?ixlib=rb-1.1.0&rect=31%2C0%2C4205%2C2102&q=45&auto=format&w=1356&h=668&fit=crop");
+background-size: 100%;
+background-repeat: no-repeat;
 font-size: 20px;
 font-weight: bold;
 float: right;
 /* margin-top: 2px; */
 padding-bottom: 0px;
 max-height: 175px;
+}
+
+#stay-cold-pin{
+    width: 10%;
+    height: 175px;
+    display: flex;
+    margin-right: 10px;
+    max-height: 100%;
 }
 
 /* .underHeader p {
@@ -96,7 +107,9 @@ max-height: 175px;
 .about{
     margin-top: 20px;
     display: inline-block;
-    
+    padding: 20px;
+    max-height:30%; 
+    margin: 20px;
 }
 
 .about h2{
@@ -112,7 +125,7 @@ max-height: 175px;
 
 .about p {
     text-align: right;
-    display: inline-block;
+    display: inline;
     flex:right;
     font-size: 20px;
     margin-left: 25px;
@@ -123,14 +136,18 @@ max-height: 175px;
 
 /* this is the work section in the main  */
 .work{
-    height: 200px;
+    height: auto;
     padding: 20px;
+    margin: 20px;
+    max-height: 30%;
+    display: flex;
+    
 
 }
 
 .work h2{
     border-right: 5px solid var(--words);
-    display: inline-block;
+    display: flex;
     max-width: 25%;
     text-align: left;
     height: 170px;
@@ -138,8 +155,76 @@ max-height: 175px;
     width:20%;
 }
 
+/* the boxes wiht the pictures in the work section */
+.boxes{
+    display: flex;
+    flex-direction: column;
+    text-align: left;     
+    font-size: 20px;
+    margin-left: 25px;
+    max-width: 70%;
+    padding-left: 20px;
+    max-height: 800px;
+
+}
+
+.bigOne{
+  height: 40%;
+  width: 100%;
+  border-style: 5px solid var(--words) ;
+  max-height: 40%;
+  display: flex;
+}
+
+.bigImg{
+    height: 100%;
+    width: 100%;
+}
+
+.bigImg:hover{
+    box-shadow: inset 0px 0px 8px, 0 0 15px var(--words) ;
+
+}
+
+
+
+.portal{    
+    margin: 10px;
+    padding: 10px;    
+    height:100%;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    max-width: 50%;
+    
+}
+
+#pics{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+#pics:hover{
+    box-shadow: inset 0px 0px 8px, 0 0 15px var(--words) ;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 30%;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+/* the contact section */
 .contact{
     padding: 20px;
+    margin: 20px;
+    max-height: 20%;
 }
 
 .contact h2{
@@ -153,7 +238,7 @@ max-height: 175px;
 }
 
 .contact li {
-    text-align: right;
+    /* text-align: right; */
     display: inline-block;
     flex:end;
     font-size: 20px;
@@ -161,18 +246,15 @@ max-height: 175px;
     margin: 10px;
     padding: 10px;
     /* float: right; */
+    justify-content: space-evenly;
 }
 
-/* this is the about me section */
-/* #about{
-    margin: 10px;
-    margin-right: 20px;
-    padding: 10px;
-    padding-right: 30px;
-    border-right: 5px solid var(--words);
-    display: inline;
-    margin-top: 50px;
-} */
+.contact section{
+    padding-top: 15px;
+    margin-right: 21px;
+    float: right;
+}
+
 
 /* this is the text in the about me container */
 #aboutMe{
@@ -180,6 +262,8 @@ max-height: 175px;
     float: right;
     margin-right: 20px;
     justify-content: center;
+    max-width: 70%;
+    height: 100%;
 }
 
 /* text under the nav bar */
@@ -200,14 +284,31 @@ max-height: 175px;
     padding-top: 30px;
 }
 
-@media screen and (max-width:992px) {
-    main {
+@media  (max-width:992px) {
+    body {
+        flex: wrap;
+        flex-direction: column;
+    }
+    .underHeader{
+        flex: wrap;
+        flex-direction: column;
+    }
+    #stay-cold-pin{
+        flex: wrap;
         flex-direction: column;
     }
 }
 
 @media screen and(max-width:768px) {
-    main{
+    body{
+        flex: wrap;
         flex-direction: column;
+    }
+    .underHeader{
+        flex: wrap;
+        flex-direction: column;
+    }
+    #stay-cold-pin{
+        display: none;
     }
 }
