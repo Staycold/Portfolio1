@@ -15,6 +15,9 @@ THEN that application's image should be larger in size than the others</li>
 THEN I am taken to that deployed application</li>
 <li>WHEN I resize the page or view the site on various screens and devices
   THEN I am presented with a responsive layout that adapts to my viewport</li>
-
+    
+https://staycold.github.io/Portfolio1/
+    
+    
 <img src="./assets/page.png"/>
 
